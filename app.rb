@@ -15,7 +15,7 @@ class App < Sinatra::Base
         @sessions = session
         item = params["item"]
         @sessions[:item] = item
-        @setting = Cart.new(@sessions)
+        @cart = Cart.new(@sessions)
         erb :checkout
     end 
 
